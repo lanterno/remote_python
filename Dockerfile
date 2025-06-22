@@ -1,7 +1,9 @@
+# syntax = docker/dockerfile:latest
+
 FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim AS python
 
 ENV PYTHONUNBUFFERED=true
-LABEL org.opencontainers.image.source="https://github.com/lanterno/remote_python"
+LABEL org.opencontainers.image.source="europe-west1-docker.pkg.dev/elghareeb-space/re-execute/api"
 LABEL authors="ahmed.elghareeb@proton.com"
 
 WORKDIR /deps
