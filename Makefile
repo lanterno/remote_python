@@ -6,3 +6,5 @@ down:
 	docker compose down
 test:
 	docker compose run --rm api pytest tests.py
+clean:
+	uvx ruff check --fix .
