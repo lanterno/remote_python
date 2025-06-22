@@ -11,7 +11,7 @@ app = FastAPI(
      specifically os, pandas, and numpy for now.
     """,
     summary="Execute Python scripts remotely - Demo app",
-    version="0.0.1",
+    version="1.0",
     contact={
         "name": "Lanterno",
         "url": "http://github.com/lanterno/",
@@ -29,7 +29,8 @@ app = FastAPI(
 @app.get("/")
 def read_root():
     return {
-        "msg": "This is an open source project available at https://github.com/lanterno/remote_python"
+        "msg": "This is an open source project available at https://github.com/lanterno/remote_python",
+        "version": "1.0",
     }
 
 
