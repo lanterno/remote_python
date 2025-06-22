@@ -1,7 +1,29 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-app = FastAPI()
+
+app = FastAPI(
+    title="Remote Python Executor",
+    description="""
+    This is a simple FastAPI application that allows you to execute Python scripts remotely.
+    The scripts must define a `main()` function that returns a JSON-serializable object (dict or list).
+    The execution environment is limited to a safe namespace with standard libraries
+     specifically os, pandas, and numpy for now.
+    """,
+    summary="Execute Python scripts remotely - Demo app",
+    version="0.0.1",
+    contact={
+        "name": "Lanterno",
+        "url": "http://github.com/lanterno/",
+        "email": "a@elghareeb.space",
+    },
+    license_info={
+        "name": "MIT License",
+        "identifier": "MIT",
+    },
+    openapi_url="/api/v1/openapi.json",
+    docs_url="/api/v1/docs",
+)
 
 
 @app.get("/")
